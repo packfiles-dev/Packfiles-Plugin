@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "warp-api": {
+      "type": "http",
+      "url": "https://warp.packfiles.io/mcp",
+      "tools": ["*"],
+      "oidc": {
+        "audience": "api://warp.packfiles.io"
+      }
+    }
+  }
+}

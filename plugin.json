@@ -1,0 +1,13 @@
+{
+  "name": "warp-migration-agent",
+  "description": "Agentic migration assistant for Packfiles Warp — diagnoses failures, plans migrations, and validates configuration",
+  "version": "1.0.0",
+  "author": {
+    "name": "Packfiles",
+    "email": "support@packfiles.io"
+  },
+  "license": "MIT",
+  "agents": ".github/agents",
+  "skills": ".github/skills",
+  "mcpServers": ".mcp.json"
+}
