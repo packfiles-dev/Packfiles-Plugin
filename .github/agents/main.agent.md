@@ -1,5 +1,5 @@
 ---
-name: warp-migration-agent
+name: packfiles-migration-agent
 description: Agentic assistant for Packfiles Warp that helps plan, execute, and troubleshoot repository migrations from Azure DevOps and Bitbucket Server to GitHub
 ---
 
