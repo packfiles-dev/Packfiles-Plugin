@@ -1,5 +1,5 @@
 {
-  "name": "warp-migration-agent",
+  "name": "packfiles-migration-agent",
   "description": "Agentic migration assistant for Packfiles Warp — diagnoses failures, plans migrations, and validates configuration",
   "version": "1.0.0",
   "author": {
