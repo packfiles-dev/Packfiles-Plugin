@@ -8,21 +8,25 @@ An Agentic App plugin for Packfiles Warp migration workflows. It helps teams pla
 .
 ├── plugin.json
 ├── .mcp.json
-└── .github/
-   ├── agents/
-   │   └── main.agent.md
-   └── skills/
-      ├── diagnose-migration/
-      │   ├── SKILL.md
-      │   └── failure-catalog.md
-      ├── plan-migration/
-      │   ├── SKILL.md
-      │   ├── output-template.md
-      │   └── scoring.md
-      └── validate-config/
-         ├── SKILL.md
-         └── warp-yml-schema.md
+├── agents/
+│   └── main.agent.md
+└── skills/
+    ├── diagnose-migration/
+    │   ├── SKILL.md
+    │   └── failure-catalog.md
+    ├── plan-migration/
+    │   ├── SKILL.md
+    │   ├── output-template.md
+    │   └── scoring.md
+    └── validate-config/
+        ├── SKILL.md
+        └── warp-yml-schema.md
 ```
+
+Agents live in `agents/` and skills in `skills/<name>/` at the repository
+root, as required by the Copilot CLI plugin spec — the harness discovers the
+**main agent** (`agents/main.agent.md`) from these paths declared in
+[`plugin.json`](plugin.json).
 
 ---
 
@@ -30,7 +34,7 @@ An Agentic App plugin for Packfiles Warp migration workflows. It helps teams pla
 
 ### Main Agent
 
-`.github/agents/main.agent.md` defines the behavior and orchestration for:
+`agents/main.agent.md` defines the behavior and orchestration for:
 
 - Diagnosing migration failures on backlog issues
 - Planning wave-based migrations
@@ -38,7 +42,7 @@ An Agentic App plugin for Packfiles Warp migration workflows. It helps teams pla
 
 ### diagnose-migration
 
-Folder: `.github/skills/diagnose-migration`
+Folder: `skills/diagnose-migration`
 - Main instructions: `SKILL.md`
 - Classification reference: `failure-catalog.md`
 - Purpose: classify failed/stuck migration issues from issue body, labels, and comments
@@ -46,7 +50,7 @@ Folder: `.github/skills/diagnose-migration`
 
 ### plan-migration
 
-Folder: `.github/skills/plan-migration`
+Folder: `skills/plan-migration`
 
 - Main instructions: `SKILL.md`
 - Scoring rules: `scoring.md`
@@ -56,7 +60,7 @@ Folder: `.github/skills/plan-migration`
 
 ### validate-config
 
-Folder: `.github/skills/validate-config`
+Folder: `skills/validate-config`
 
 - Main instructions: `SKILL.md`
 - Schema reference: `warp-yml-schema.md`
