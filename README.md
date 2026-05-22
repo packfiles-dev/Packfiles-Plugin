@@ -72,30 +72,35 @@ Folder: `.github/skills/validate-config`
 ### Local Testing (Copilot CLI)
 
 ```bash
-# Install the plugin locally
-copilot plugin install ./hello-warp-plugin
+# Install the plugin from the repo root
+copilot plugin install .
 
 # Verify
 copilot plugin list
 
 # Interactive session
 copilot
-/agent              # confirm warp-migration-agent loaded
+/agent              # confirm packfiles-migration-agent loaded
 /skills list        # confirm skills loaded
 ```
 
 ### Deploy as an Agentic App
 
-1. **Push to a public GitHub repository:**
-   ```bash
-   cd hello-warp-plugin
-   git init && git add . && git commit -m "Warp migration agent plugin"
-   gh repo create packfiles/warp-migration-agent --public --source=. --push
-   ```
+1. **Make the repository public.** The Agent HQ platform requires the plugin
+   repository to be public. Flip visibility from the repository's **Settings →
+   General → Danger Zone → Change visibility**. Do not stage files blindly with
+   `git add .` — see [`.gitignore`](.gitignore), which keeps internal reference
+   material (e.g. PDFs) and credential files out of version control.
 
 2. **Register a GitHub App** at GitHub Settings → Developer settings → GitHub Apps:
-   - Permissions needed: Issues (read/write), Pull Requests (read/write), Contents (read)
+   - Permissions (least privilege): Issues (read/write), Pull Requests
+     (read/write), Contents (read/write). Contents **write** is required because
+     `plan-migration` writes `migration-strategy.md` and `validate-config` can
+     update `config/warp.yml`. To keep the agent from committing to Migration HQ,
+     scope Contents to read-only and have skills return output in chat instead.
    - Subscribe to events: `issues`, `issue_comment`, `pull_request`, `pull_request_review_comment`
+   - Install the App only on the organizations/repositories that use Warp — not
+     on all repositories.
 
 3. **Configure as Agentic App** (type=plugin), pointing to the public repo.
 
@@ -116,6 +121,15 @@ The plugin uses OIDC to authenticate with the Warp API — no long-lived secrets
 - Add more skills (e.g., `generate-report`, `bulk-retry`, `audit-permissions`)
 - Add hooks for deterministic pre-processing (e.g., always validate credentials before `/migrate`)
 - Add additional agents for specialized workflows (e.g., a `post-migration-agent` that sets up branch protection and CODEOWNERS after migration)
+
+## Security
+
+This repository is public because the contents are synced and run as a deployed
+Agentic App. Every file here defines production agent behavior, and the agent
+processes untrusted issue/PR/comment content. The plugin stores **no secrets** —
+it authenticates to the Warp API via OIDC. See [`SECURITY.md`](SECURITY.md) for
+the security model and how to report a vulnerability, and
+[`.github/CODEOWNERS`](.github/CODEOWNERS) for required review on agent changes.
 
 ## License
 
