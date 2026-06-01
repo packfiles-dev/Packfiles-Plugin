@@ -56,7 +56,7 @@ Otherwise, parse the YAML content and proceed.
 
 ## Step 3: Validate Against Schema
 
-Read `.github/skills/validate-config/warp-yml-schema.md` in full before performing
+Read `skills/validate-config/warp-yml-schema.md` in full before performing
 any validation. Apply the rules exactly as written there.
 
 For each top-level configuration key present in the file, validate:
@@ -94,7 +94,7 @@ These are always surfaced as warnings (not errors) since they may be intentional
 
 ## Step 5: Post Findings
 
-**Review mode:** Use `create_issue_comment` to post the full findings report on the current
+**Review mode:** Use `add_issue_comment` to post the full findings report on the current
 issue. Format:
 
 ```markdown

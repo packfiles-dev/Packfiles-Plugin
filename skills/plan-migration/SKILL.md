@@ -93,7 +93,7 @@ If neither is present, treat size as 0.
 
 ## Step 3: Score and Classify Every Repository
 
-Read `/skills/plan-migration/scoring.md` in full before scoring any
+Read `skills/plan-migration/scoring.md` in full before scoring any
 repository. Apply the scoring rules exactly as written there. Do not apply ADO pipeline
 scoring to BBS repositories.
  
@@ -189,7 +189,7 @@ team, source platform, and activity level). They do NOT replace or remove any ex
 
 ## Step 7: Generate the Migration Strategy Document
 
-Read `/skills/plan-migration/output-template.md` in full. Produce the
+Read `skills/plan-migration/output-template.md` in full. Produce the
 migration strategy document exactly as specified there — all 11 sections in order, with
 no additions, omissions, or merged sections.
 If no location is specified for the migration strategy document, output it to the root of the repository with the filename `migration-strategy.md`. If a location is specified, output it there with the same filename.

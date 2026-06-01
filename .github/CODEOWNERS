@@ -1,8 +1,4 @@
 # Every file in this repo defines deployed agent behavior — changes to the
 # agent, skills, and MCP/plugin config are changes to production.
-#
-# TODO before publishing: replace @packfiles-dev/maintainers with the real
-# maintainers team or individual usernames. Combined with branch protection
-# that requires Code Owner review, this gates every change to agent behavior.
 
 *  @packfiles-dev/maintainers

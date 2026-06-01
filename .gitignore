@@ -1,8 +1,7 @@
-# Internal reference material — kept local, never published
-# (excludes "Agent HQ plugins guide v1.0.pdf")
+# Internal reference material
 *.pdf
 
-# Secrets and credentials — must never be committed (plugin auth uses OIDC)
+# Secrets and credentials — must never be committed
 .env
 .env.*
 *.pem
