@@ -63,7 +63,7 @@ If no prior `/migrate` comment is found and no error output is present, inform t
 
 ## Step 2: Classify the Failure
 
-Read `.github/skills/diagnose-migration/failure-catalog.md` in full before attempting to
+Read `skills/diagnose-migration/failure-catalog.md` in full before attempting to
 classify the failure. Apply the classification criteria exactly as written there.
 
 Match the error output and context gathered in Step 1 against the failure catalog. A single

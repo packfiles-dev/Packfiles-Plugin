@@ -308,13 +308,12 @@ GitHub App service connection ID is configured in `config/warp.yml` (Section 8, 
 
 A concise, yet professional, customer-facing section covering licensing options and cost estimates for this
 migration. 
-All pricing information must reflect current figures from https://packfiles.io/pricing.
 
 **Capacity Options**
 
 | Tier | Repository Capacity | Price | Cost Per Repository |
 |---|---|---|---|
-| Free Trial | Up to 100 | $0 (no credit card required) | $0 |
+| Free Trial | Up to 25 | $0 (no credit card required) | $0 |
 | Small Box | 100 | $2,000 USD | $20 |
 | Medium Box | 1,000 | $15,000 USD | $15 |
 | Custom | 1,000+ | Contact Packfiles | — |
