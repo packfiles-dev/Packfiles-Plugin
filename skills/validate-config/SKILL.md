@@ -94,8 +94,8 @@ These are always surfaced as warnings (not errors) since they may be intentional
 
 ## Step 5: Post Findings
 
-**Review mode:** Use `add_issue_comment` to post the full findings report on the current
-issue. Format:
+**Review mode:** Use engine-tools-reply_to_comment to post the full findings report on the current
+PR. Format:
 
 ```markdown
 ## Warp Configuration Review
@@ -157,7 +157,7 @@ confirmation — always show the proposed change first.
 
 ## Output Requirements
 
-- In Review mode, always post findings as an issue comment via `create_issue_comment`.
+- In Review mode, always post findings as an issue comment via engine-tools-reply_to_comment.
   Do not only return findings in the chat conversation.
 - In Authoring mode, return the snippet in chat. Post to the issue only if asked.
 - Keep explanations for each finding to one or two sentences — sufficient to understand
